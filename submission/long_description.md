@@ -12,7 +12,7 @@ The analysis pipeline is mainly executed in an HPC environment. And enabling the
 ## Targets
 
 There are 2 project's targets.
-1. Enabling the bio tools RPM packages on x86_64 and ppc64le, optionally other CPU architectures for Fedora and EPEL 7 and 8. When enabling it on EPEL, it is possible to use it on RHEL and CentOS.
+1. Enabling the bio tools RPM packages on x86_64 and ppc64le, optionally other CPU architectures for Fedora and EPEL 7 and 8. When enabling it on EPEL, it is possible to use it on RHEL and CentOS. The RPM packages are managed on Fedora dist-git repositories, and listed up on the Fedora Koschei biology tag group [3] linked from Fedora Medical Special Interest Group (SIG) page [4].
 2. Enabling the nf-core pipelines on ppc64le based HPC, benchmarking it.
 
 ## How?
@@ -30,7 +30,7 @@ We use the following nf-core pipelines. First 3 pipelines nanoseq, artic, and vi
 
 We enable the bio tools RPMs used in a pipeline, then enable the pipeline on the RHEL ppc64le environment for each pipeline one by one in an agile manner.
 
-## Challenges and Values
+## Challenges
 
 There are 2 challenges.
 
@@ -38,20 +38,21 @@ There are 2 challenges.
 2. A few of the bio tools used in the nf-core pipelines are not fully open-sourced.
 
 For "1.", the reason is the use of SIMD intrinsics or Intel assembly code in the code.
-As a solution, we will use SIMDe (SIMD Everywhere) library [3] to enable the multiple CPU environment, contributing to the upstream projects.
+As a solution, we will use SIMDe (SIMD Everywhere) library [5] to enable the multiple CPU environment, contributing to the upstream projects.
 SIMDe has already been used or evaluated positively in popular bio-tools.
 
-For "2.", we consider the fully open sourced alternative or the fully open sourced client tool to access the function.
+For "2.", instead we consider the fully open sourced alternative or the fully open sourced client tool to access the function on the server.
 
 ## Collaboration
 
-We collaborate with other organizations or communities as a possibility, such as Fedora Medical Special Interest Group (SIG) [4], Debian Med team [5], nf-core, Nextflow.
-Please note that apart from this project, when enabling the nf-core pipeline on aarch64 (ARM 64-bit) CPU architecture, we might use the ARM based HPC by a collaboration.
+We collaborate with other organizations or communities as a possibility, such as Fedora Medical SIG, Debian Med team [6], nf-core, Nextflow and etc.
+Please note that apart from the target of this project, when enabling the nf-core pipeline on aarch64 (ARM 64-bit) CPU architecture, we might use the ARM based HPC by a collaboration.
 
 ## Rererences
 
 * [1] https://nf-co.re/
 * [2] https://www.nextflow.io/
-* [3] https://github.com/nemequ/simde
+* [3] https://koschei.fedoraproject.org/groups/biology?untracked=1
 * [4] https://fedoraproject.org/wiki/SIGs/Medical
-* [5] https://www.debian.org/devel/debian-med/
+* [5] https://github.com/nemequ/simde
+* [6] https://www.debian.org/devel/debian-med/
