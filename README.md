@@ -10,3 +10,11 @@ Enable the x86_64 and ppc64le RPM based COVID-19 analysis pipelines.
 ## Long description
 
 See [this page](submission/long_description.md).
+
+## Dependency software packages for pipelines
+
+Run the following command to see the list.
+
+```
+$ cat nf-core/dependencies/* | sort | uniq -c | sort -n -r
+```
