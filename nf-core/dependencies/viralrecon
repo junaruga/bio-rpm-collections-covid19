@@ -1,0 +1,24 @@
+ABACAS
+BCFTools
+BEDTools
+BLAST
+Bowtie 2
+Cutadapt
+FastQC
+Kraken2
+Minimap2
+MultiQC
+Picard
+QUAST
+R
+SPAdes
+Samtools
+SnpEff
+SnpSift
+Unicycler
+VarScan 2
+fastp
+iVar
+minia
+parallel-fastq-dump
+vg
