@@ -1,7 +1,7 @@
-BEDTools
-BWA
-FastQC
-MultiQC
-NanoPlot
-Samtools
+bedtools
+bwa
+fastqc
 minimap2
+multiqc
+nanoplot
+samtools

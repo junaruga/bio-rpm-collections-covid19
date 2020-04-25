@@ -1,24 +1,24 @@
-ABACAS
-BCFTools
-BEDTools
-BLAST
-Bowtie 2
-Cutadapt
-FastQC
-Kraken2
-Minimap2
-MultiQC
-Picard
-QUAST
-R
-SPAdes
-Samtools
-SnpEff
-SnpSift
-Unicycler
-VarScan 2
+abacas
+bcftools
+bedtools
+blast
+bowtie 2
+cutadapt
 fastp
-iVar
+fastqc
+ivar
+kraken2
 minia
+minimap2
+multiqc
 parallel-fastq-dump
+picard
+quast
+r
+samtools
+snpeff
+snpsift
+spades
+unicycler
+varscan 2
 vg

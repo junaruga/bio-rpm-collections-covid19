@@ -1,10 +1,10 @@
-BEDTools
-FastQC
-GraphMap2
-MultiQC'
-NanoPlot
-Samtools
+bedtools
+fastqc
+graphmap2
 guppy
 minimap2
-pycoQC
+multiqc'
+nanoplot
+pycoqc
 qcat
+samtools
