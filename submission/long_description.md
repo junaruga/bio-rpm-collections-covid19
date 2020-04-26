@@ -2,7 +2,7 @@ Bio RPM Collections COVID-19 project is to enable the RPM based pipelines for CO
 
 ## Motivation
 
-One of the key factors to fight COVID-19 is the DNA/RNA analysis by the bioinformatics (bio) tools. The way to make the analysis deliverable and maintainable in a secure manner on RPM based Linux distributions such as Red Hat Enterprise Linux (RHEL), CentOS, Fedora and etc is thriving the RPM packages eco-system.
+One of the key factors to fight COVID-19 is the DNA/RNA analysis by the bioinformatics (bio) tools. The way to make the analysis deliverable and maintainable in a secure manner on RPM based Linux distributions such as Red Hat Enterprise Linux (RHEL), CentOS, Fedora and etc, is thriving the RPM packages eco-system.
 
 The prioritized selection for the RPM packages is decided by the actual COVID-19 analysis pipelines. In this project, we use nf-core pipelines [1] that is a community effort to collect a set of analysis pipelines built using Nextflow [2]. Nextflow is the workflow software that can have the containerized pipeline.
 
