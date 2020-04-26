@@ -1,6 +1,7 @@
-# Bio Tools RPM Collections COVID-19
+# Bio RPM Collections COVID-19
 
-This project is to enable the RPM based nf-core COVID-19 analysis pipelines on multiple CPU architectures.
+This project is to enable the RPM based nf-core pipelines for COVID-19 analysis on multiple CPU architectures.
+
 It is submitted for [Call for Code 2020](https://callforcode.org/challenge/).
 
 ## Short description
