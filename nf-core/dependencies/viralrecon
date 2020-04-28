@@ -2,7 +2,7 @@ abacas
 bcftools
 bedtools
 blast
-bowtie 2
+bowtie2
 cutadapt
 fastp
 fastqc
@@ -20,5 +20,5 @@ snpeff
 snpsift
 spades
 unicycler
-varscan 2
+varscan2
 vg
