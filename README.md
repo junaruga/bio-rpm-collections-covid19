@@ -1,20 +1,13 @@
 # Bio RPM Collections COVID-19
 
-This project is to enable the RPM based nf-core pipelines for COVID-19 analysis on multiple CPU architectures.
+This project is to enable the RPM based nf-core pipelines for COVID-19 analysis on multiple CPU architectures, solving the following 2 challenges.
 
-It is submitted for [Call for Code 2020](https://callforcode.org/challenge/).
-
-## Short description
-
-Enable the x86_64 and ppc64le RPM based COVID-19 analysis pipelines.
-
-## 3-minutes video
-
-The video that describes and demonstrates your solution is [here](https://drive.google.com/open?id=1yBRJARHhjicMK8wy31uIIfxKLHBtBWMn).
+1. Some of the bio tools do not work on non-Intel (x86_64) CPUs. This prevents us from running the COVID-19 analysis on non-x86_64 CPU based HPC, even when PowerPC (ppc64le) and ARM (aarch64) based HPC have a big impact in the HPC market share.
+2. In the HPC running RHEL and CentOS, the bio tools RPM packages are used to manage them in a secure and consumable manner. Even while there are the needs, there are relatively a small number of the RPM packages.
 
 ## Long description
 
-See [this page](submission/long_description.md).
+See [this page](doc/long_description.md).
 
 ## Dependency software packages for pipelines
 
