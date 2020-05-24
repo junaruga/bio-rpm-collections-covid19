@@ -31,6 +31,17 @@ To download the file by clicking "Send To", and select "Complete Record", "File 
 
 Save it as MN908947.3.fasta.
 
+Or use the API to download.
+The downloaded file by API line break is dos format.
+To use it on Linux environment, convert the line break (dos: `\r\n`) to (unix: `\n`).
+See [this page](https://stackoverflow.com/questions/2613800/how-to-convert-dos-windows-newline-crlf-to-unix-newline-lf-in-a-bash-script#2613834) for detail to check the way to convert it.
+
+```
+$ wget -O MN908947.3.fasta https://www.ncbi.nlm.nih.gov/search/api/sequence/MN908947.3/?report=fasta
+
+$ sed -i.org $'s/\r$//' MN908947.3.fasta
+```
+
 ```
 $ head MN908947.3.fasta
 ```
@@ -56,7 +67,24 @@ $ ./retrive_sequence.sh
 
 Download the files by the specified accession IDs.
 
-
 ```
 $ ./retrive_sequence.sh NC_045512 MT509512
 ```
+
+## How to calculate GC content
+
+Calculate GC content from the downloaded data `MN908947.3.fasta`.
+
+```
+$ python3 calc_gc_content.py
+
+$ python3 calc_gc_content.py
+Total Count: 29903
+GC Content: 37.97%
+```
+
+### Exercises
+
+* SARS-related-coronavirus [AY27411.3]
+* MERS-related-coronavirus [JX869059.2]
+* Guandong Chinese water stink coronavirus [MG600026.1]
