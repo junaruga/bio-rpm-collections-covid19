@@ -20,3 +20,43 @@ Generate map by [the data for the COVID-19 deaths global](https://github.com/CSS
 ```
 $ python3 map_covid19_exercises.py
 ```
+
+## How to Download Sequences?
+
+### Tutorial
+
+Use [this data for SARS-CoV-2 first sequenced in Wuhan, China](https://www.ncbi.nlm.nih.gov/nuccore/MN908947) that was pointed out from [NCBI SARS-CoV-2 Sequences](https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs).
+
+To download the file by clicking "Send To", and select "Complete Record", "File - Format: FASTA", and click "Create File" button.
+
+Save it as MN908947.3.fasta.
+
+```
+$ head MN908947.3.fasta
+```
+
+Check the downloaded fasta file by the python script.
+
+```
+$ python3 check_download_data.py
+Total Length: 29903
+A: 8954 counts, Composition: 29.9%
+T: 9594 counts, Composition: 32.1%
+G: 5863 counts, Composition: 19.6%
+C: 5492 counts, Composition: 18.4%
+```
+
+Run the following bash script to download files in `out` directory by specified accession IDs.
+
+```
+$ ./retrive_sequence.sh
+```
+
+### Exercises
+
+Download the files by the specified accession IDs.
+
+
+```
+$ ./retrive_sequence.sh NC_045512 MT509512
+```
