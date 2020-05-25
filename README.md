@@ -38,11 +38,12 @@ Currently there are 2 challenges. First, some of the bio tools are only supporte
 
 ## Collaboration
 
-We collaborate with other organizations or communities, such as Fedora Medical SIG, Debian Med team [4], nf-core, Nextflow. When enabling the pipelines on aarch64 (ARM 64-bit) CPU architecture, we have a possibility to use an ARM based HPC by a collaboration.
+We collaborate with other organizations or communities, such as Fedora Medical SIG [4], Debian Med team [5], nf-core, Nextflow. When enabling the pipelines on aarch64 (ARM 64-bit) CPU architecture, we have a possibility to use an ARM based HPC by a collaboration.
 
 ## Rererences
 
 * [1] https://nf-co.re/
 * [2] https://www.nextflow.io/
 * [3] https://github.com/nemequ/simde
-* [4] https://www.debian.org/devel/debian-med/
+* [4] https://fedoraproject.org/wiki/SIGs/Medical
+* [5] https://www.debian.org/devel/debian-med/
