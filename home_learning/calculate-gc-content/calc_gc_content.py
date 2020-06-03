@@ -1,4 +1,10 @@
-lines = open("MN908947.3.fasta", 'r').readlines()[1:]
+import sys
+
+fasta_file = "MN908947.3.fasta"
+if len(sys.argv) > 1:
+    fasta_file = sys.argv[1]
+
+lines = open(fasta_file, 'r').readlines()[1:]
 
 count = 0
 

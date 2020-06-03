@@ -77,14 +77,44 @@ Calculate GC content from the downloaded data `MN908947.3.fasta`.
 
 ```
 $ python3 calc_gc_content.py
-
-$ python3 calc_gc_content.py
 Total Count: 29903
 GC Content: 37.97%
 ```
 
 ### Exercises
 
-* SARS-related-coronavirus [AY27411.3]
-* MERS-related-coronavirus [JX869059.2]
-* Guandong Chinese water stink coronavirus [MG600026.1]
+####  SARS-related-coronavirus [AY27411.3]
+
+https://www.ncbi.nlm.nih.gov/nuccore/AY27411.3
+
+```
+$ wget -O AY27411.3.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=AY27411.3&rettype=fasta&retmode=text"
+...
+2020-06-03 11:51:14 ERROR 400: Bad Request.
+```
+
+The data is not found.
+
+####  MERS-related-coronavirus [JX869059.2]
+
+https://www.ncbi.nlm.nih.gov/nuccore/JX869059.2
+
+```
+$ wget -O JX869059.2.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=JX869059.2&rettype=fasta&retmode=text"
+
+$ python3 calc_gc_content.py JX869059.2.fasta
+Total Count: 30119
+GC Content: 41.24%
+```
+
+#### Guandong Chinese water stink coronavirus [MG600026.1]
+
+https://www.ncbi.nlm.nih.gov/nuccore/MG600026.1
+
+```
+$ wget -O MG600026.1.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=MG600026.1&rettype=fasta&retmode=text"
+
+$ python3 calc_gc_content.py MG600026.1.fasta
+Total Count: 22445
+GC Content: 35.21%
+```
