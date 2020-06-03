@@ -182,3 +182,18 @@ Start    - Stop Position
    29771 -    29806	Nucleotide Length:     36	Amino Acid Length:       11
    29806 -    29844	Nucleotide Length:     39	Amino Acid Length:       12
 ```
+
+### Let's see slippery sequence on the SARS-CoV-2 genome
+
+```
+$ python3 print_slippery_position.py 
+1664
+6085
+6745
+13462
+16669
+18475
+20227
+20817
+24436
+```
