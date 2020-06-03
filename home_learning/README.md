@@ -118,3 +118,32 @@ $ python3 calc_gc_content.py MG600026.1.fasta
 Total Count: 22445
 GC Content: 35.21%
 ```
+
+## Where are Genes?
+
+### Store the nucleotide sequence as a python string
+
+```
+$ wget -O sars_cov_2.fa "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=MN908947&rettype=fasta"
+
+$ md5sum sars_cov_2.fa
+2d67a6effebccc797fbd60f4b5659770  sars_cov_2.fa
+
+$ python3 print_genome_length.py
+29903
+```
+
+### Let's find the Open Reading Frame in the sequence
+
+```
+$ python3 find_triplet_test.py
+test_seek_orf_exact_match (__main__.TestRetrieveTripletPosition) ... ok
+test_seek_orf_exact_multiple_match (__main__.TestRetrieveTripletPosition) ... ok
+test_seek_orf_no_match (__main__.TestRetrieveTripletPosition) ... ok
+test_seek_orf_non_triplet (__main__.TestRetrieveTripletPosition) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+```
