@@ -147,3 +147,38 @@ Ran 4 tests in 0.000s
 
 OK
 ```
+
+### How small the target protein is
+
+TODO: What is this script doing?
+
+```
+$ python3 find_orf_test.py
+test_seek_orf (__main__.TestSeekOrf) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+```
+
+### Let's seek ORF
+
+```
+$ python3 seek_orf_main.py | wc -l
+559
+
+$ python3 seek_orf_main.py
+557 ORF candidates found.
+Start    - Stop Position
+     107 -      136	Nucleotide Length:     30	Amino Acid Length:        9
+     266 -    13483	Nucleotide Length:  13218	Amino Acid Length:     4405
+     468 -      533	Nucleotide Length:     66	Amino Acid Length:       21
+     489 -      533	Nucleotide Length:     45	Amino Acid Length:       14
+     507 -      533	Nucleotide Length:     27	Amino Acid Length:        8
+     518 -    13483	Nucleotide Length:  12966	Amino Acid Length:     4321
+...
+   29618 -    29674	Nucleotide Length:     57	Amino Acid Length:       18
+   29771 -    29806	Nucleotide Length:     36	Amino Acid Length:       11
+   29806 -    29844	Nucleotide Length:     39	Amino Acid Length:       12
+```
