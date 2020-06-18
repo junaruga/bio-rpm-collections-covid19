@@ -202,3 +202,101 @@ $ python3 print_slippery_position.py
 20817
 24436
 ```
+
+## How to Draw Phylogenetic Tree
+
+Install Miniconda referring [the Miniconda](https://docs.conda.io/en/latest/miniconda.html) and [Installing in silient mode](https://docs.anaconda.com/anaconda/install/silent-mode/).
+
+`/home/root/local/miniconda3-py38-4.8.3` is installed directory in my case.
+
+```
+$ wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.3-Linux-x86_64.sh
+$ sudo mkdir /home/root/local/miniconda3-py38-4.8.3
+$ sudo chown jaruga:jaruga /home/root/local/miniconda3-py38-4.8.3
+
+$ bash Miniconda3-py38_4.8.3-Linux-x86_64.sh -b -u -p /home/root/local/miniconda3-py38-4.8.3
+...
+installation finished.
+```
+
+Note I recommend to skip the following step with `eval`, `conda init`, `conda config` commands, moving on `vi ~/.bashrc` step.
+
+As I don't want `.bashrc` is modified by `conda init`, I reverted it.
+
+```
+$ eval "$(/home/root/local/miniconda3-py38-4.8.3/bin/conda shell.bash hook)"
+
+(base) $ command -v conda
+conda
+
+(base) $ conda init
+modified      /home/jaruga/.bashrc
+
+(base) $ conda config --set auto_activate_base false
+```
+
+Add `conda`'s bin directory `PATH` with lower priority after the standard bin directories like this.
+
+```
+$ vi ~/.bashrc
+...
+PATH="${PATH}:/home/root/local/miniconda3-py38-4.8.3/bin"
+...
+export PATH
+
+$ source ~/.bashrc
+```
+
+```
+$ which conda
+/home/root/local/miniconda3-py38-4.8.3/bin/conda
+
+$ which python3
+/usr/bin/python3
+
+$ which python
+/usr/bin/python
+```
+
+```
+$ conda install -c bioconda -y mafft
+$ conda install -c genomedk -y raxml-ng
+```
+
+```
+$ conda list
+# packages in environment at /home/root/local/miniconda3-py38-4.8.3:
+#
+# Name                    Version                   Build  Channel
+...
+mafft                     7.467                h516909a_0    bioconda
+...
+raxml-ng                  0.6.0                         0    genomedk
+...
+
+$ command -v mafft
+/home/root/local/miniconda3-py38-4.8.3/bin/mafft
+
+$ command -v raxml-ng
+/home/root/local/miniconda3-py38-4.8.3/bin/raxml-ng
+```
+
+```
+$ wget https://raw.githubusercontent.com/pitagora-network/home-learning/master/multi.fa
+```
+
+The following command creates `multi.aln` file.
+
+```
+$ mafft --leavegappyregion --auto multi.fa > multi.aln
+```
+
+The following command creates `multi.aln.raxml.*` files.
+
+```
+$ raxml-ng -msa multi.aln --all --model GTR+G --bs-trees 100
+```
+
+Upload `multi.aln.raxml.bestTree` file clicking "Upload a tree" button at https://itol.embl.de/ .
+
+Then here is [the result](https://itol.embl.de/tree/94112133107179951592513704).
